@@ -11,6 +11,8 @@ wchar_t* SQLEXPRESS = L"SQLEXPRESS";
 wchar_t* PATH_TO_VERSION = L"MSSQLServer\\CurrentVersion";
 wchar_t* PARAM_CurrentVersion = L"CurrentVersion";
 
+bool ReadRegistryString(HKEY hkeyroot, wchar_t* location, wchar_t* keyname, wchar_t* keyvalue, int keyvalue_length);
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	wchar_t *value = (wchar_t*)malloc(256 * sizeof(wchar_t));
